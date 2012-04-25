@@ -28,19 +28,19 @@
 
   "You may have a multitude of possible paths"
   (let [x 5]
-    (= :your-road (cond (= x __) :road-not-taken
-                        (= x __) :another-road-not-taken
-                        :else __)))
+    (= :your-road (cond (= x 1) :road-not-taken
+                        (= x 2) :another-road-not-taken
+                        :else :your-road)))
 
   "Or your fate may be sealed"
-  (= __ (if-not (zero? __)
+  (= 'doom (if-not (zero? 5)
           'doom
           'doom))
 
   "In case of emergency, sound the alarms"
   (= :sirens
-     (explain-defcon-level __))
+     (explain-defcon-level :cocked-pistol ))
 
   "But admit it when you don't know what to do"
-  (= __
+  (= :say-what? 
      (explain-defcon-level :yo-mama)))
